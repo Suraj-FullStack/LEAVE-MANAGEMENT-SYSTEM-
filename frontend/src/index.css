@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Segoe UI", sans-serif;
+}
+
+:root {
+  color: #172033;
+  background: #f5f7fb;
+  font-family: var(--font-sans);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(ellipse at top right, rgb(219 234 254 / 48%), transparent 34rem),
+    #f5f7fb;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+button,
+a {
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+input,
+select,
+textarea {
+  color: #172033;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #94a3b8;
+}
+
+::selection {
+  color: #12356b;
+  background: #bfdbfe;
+}
+
+@media (max-width: 767px) {
+  .app-shell {
+    min-height: 100vh;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .app-sidebar {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+    overflow-x: auto;
+    padding: 0.65rem 0.75rem;
+  }
+
+  .app-sidebar nav {
+    display: flex;
+    flex: 1;
+    gap: 0.25rem;
+    overflow-x: auto;
+    padding: 0;
+  }
+
+  .app-sidebar nav a {
+    flex: 0 0 auto;
+    padding: 0.55rem 0.7rem;
+    font-size: 0.75rem;
+  }
+
+  .app-sidebar .sidebar-role {
+    display: none;
+  }
+
+  .app-content {
+    min-height: 0;
+    overflow: visible;
+  }
+
+  .app-content main {
+    padding: 1.1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

@@ -1,0 +1,36 @@
+# Python / Django
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+venv/
+env/
+.env
+*.log
+logs/*.log
+
+# Django specific
+*.sqlite3
+media/
+staticfiles/
+
+# Node / React
+node_modules/
+dist/
+.DS_Store
+*.local
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
